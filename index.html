@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ポケモンタイピング（非公式）</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<nav>
+		<div class="navigator">
+			<div id="Kanto"  class="change-region"><p>カントー</p></div>
+			<div id="Johto"  class="change-region"><p>ジョウト</p></div>
+			<div id="Hoenn"  class="change-region"><p>ホウエン</p></div>
+			<div id="Sinnoh" class="change-region"><p>シンオウ</p></div>
+			<div id="Unova"  class="change-region"><p>イッシュ</p></div>
+			<div id="Kalos"  class="change-region"><p>カロス</p></div>
+			<div id="Alola"  class="change-region"><p>アローラ</p></div>
+			<div id="All"    class="change-region"><p>全国</p></div>
+		</div>
+	</nav>
+	<div class="container">
+		<h1>ポケモンタイピング（非公式）</h1>
+		<div class="quiz-box">
+			<div class="quiz-box-left">
+				<div class="img-box">
+					<figure>
+						<img id="image" src="./img/001.png">
+						<figcaption>&copy; http://www.pokemon.jp</figcaption>
+					</figure>
+				</div>
+				<p id="info"><br></p>
+				<form id="answer-form">
+					<input type="text" id="answer" placeholder="enterで判定" autocomplete="off">
+					<input type="button" id="start-btn" value="開始">
+				</form>
+			</div>
+			<div class="quiz-box-right">
+				<p id="remain-num">残り151匹</p>
+				<p id="timer">0:00:00.000</p>
+			</div>
+		</div>
+		<p>著作権はすべて。。。。</p>
+	</div>
+	<script src="./js/pokemon.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>

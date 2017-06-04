@@ -1,0 +1,89 @@
+body {
+	margin: 0;
+}
+
+.navigator {
+	display: flex;
+	background: #d6d6d6;
+}
+
+.navigator div {
+	width: 80px;
+	text-align: center;
+	border-left: solid 1px white;
+	border-right: solid 1px white;
+}
+
+.navigator div:hover {
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+.navigator div + div {
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.quiz-box {
+	border: solid 1px black;
+	width: 100%;
+	margin: 0 auto;
+	padding: 30px;
+	display: flex;
+}
+
+.quiz-box-left {
+	width: 60%;
+}
+
+
+.img-box {
+	text-align: center;
+}
+
+figure {
+	margin: auto;
+	width: 320px;
+}
+
+figure img {
+	display: block;
+	width: 300px;
+	height: auto;
+	margin: 0 auto;
+}
+
+figcaption {
+	color: gray;
+	text-align: right;
+	font-size: 14px;
+}
+
+
+#info {
+	text-align: center;
+	font-size: 25px;
+	margin: 20px 0 0;
+}
+
+form {
+	width: 360px;
+	margin: 0 auto;
+	vertical-align: center;
+
+}
+
+#answer {
+	text-align: center;
+	width: 250px;
+	font-size: 25px;
+}
+
+#start-btn {
+	width: 100px;
+	height: 35px;
+	font-size: 20px;
+}
