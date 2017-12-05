@@ -84,7 +84,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       key: 'POKEMON_RANGE',
       get: function get() {
-        return [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650, 721], [722, 802], [1, 802]];
+        return [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650, 721], [722, 806], [1, 806]];
       }
     }]);
 
@@ -130,7 +130,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       key: 'setImage',
       value: function setImage(num) {
-        id('image').src = './img/' + num + '.png';
+        if (num < 803) {
+          id('image').src = './img/' + num + '.png';
+        } else {
+          id('image').src = './img/' + num + '.gif';
+        }
       }
     }, {
       key: 'remainDecrement',
@@ -167,9 +171,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         id('answer').value = '';
         if (!this.isStarted) return false;
         if (answer === this.answer()) {
+          this.remainDecrement();
           if (this.localMissCount <= Game.ALLOWED_MISS_COUNT) this.correctIncrement();
           if (this.remain === 0) {
-            this.thisOver();
+            this.gameOver();
           } else {
             id('info').innerHTML = this.localMissCount < 3 ? '正解！' : '<br>';
             this.localMissCount = 0;

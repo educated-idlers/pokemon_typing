@@ -49,8 +49,8 @@
         [387, 493],
         [494, 649],
         [650, 721],
-        [722, 802],
-        [  1, 802]
+        [722, 806],
+        [  1, 806]
       ];
     };
 
@@ -86,7 +86,11 @@
     }
 
     setImage(num) {
-      id('image').src = `./img/${num}.png`;
+      if (num < 803) {
+        id('image').src = `./img/${num}.png`;
+      } else {
+        id('image').src = `./img/${num}.gif`;
+      }
     }
 
     remainDecrement() {
@@ -117,9 +121,10 @@
       id('answer').value = '';
       if (!this.isStarted) return false;
       if (answer === this.answer()) {
+        this.remainDecrement();
         if (this.localMissCount <= Game.ALLOWED_MISS_COUNT) this.correctIncrement();
         if (this.remain === 0) {
-          this.thisOver();
+          this.gameOver();
         } else {
           id('info').innerHTML = (this.localMissCount < 3) ? '正解！' : '<br>';
           this.localMissCount = 0;
